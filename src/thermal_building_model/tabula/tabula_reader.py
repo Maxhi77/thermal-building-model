@@ -4,8 +4,8 @@ SPDX-FileCopyrightText: Maximilian Hillen <maximilian.hillen@dlr.de>
 
 """
 import pandas as pd
-from thermal_building_model.helpers.path_helper import get_project_root
-from thermal_building_model.helpers.calculate_gain_by_sun import Window
+from thermal_building_model.src.thermal_building_model.helpers.path_helper import get_project_root
+from thermal_building_model.src.thermal_building_model.helpers.calculate_gain_by_sun import Window
 import os
 import warnings
 import math

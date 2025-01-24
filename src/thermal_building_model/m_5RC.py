@@ -303,11 +303,17 @@ class GenericBuildingBlock(ScalarBlock):
             if isinstance(n.t_set_heating, (float, int)):
                 t_set_heating = n.t_set_heating
             elif isinstance(n.t_set_heating, List):
-                t_set_heating = n.t_set_heating[t]
+                if t==0:
+                    t_set_heating = n.t_set_heating[t]
+                else:
+                    t_set_heating = n.t_set_heating[t-1]
             if isinstance(n.t_set_cooling, (float, int)):
                 t_set_cooling = n.t_set_cooling
             elif isinstance(n.t_set_cooling, List):
-                t_set_cooling = n.t_set_cooling[t]
+                if t==0:
+                    t_set_cooling = n.t_set_cooling[t]
+                else:
+                    t_set_cooling = n.t_set_cooling[t-1]
             bounds = (
                 t_set_heating,
                 t_set_cooling,
